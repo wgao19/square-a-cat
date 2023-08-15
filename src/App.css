@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+:root {
+  --color-bg: #ffffa0;
+  --color-text-main: #000000;
+  --color-primary: #afece0;
+  --wrapper-height: 85vh;
+  --image-max-width: 320px;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+  
+  --spacing: 4px;
+  --carousel-item-width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+  --carousel-size: 500px;
+}
+body {
+  margin: 0;
+}
+[hidden] {
+  display: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+.add-button {
+  color: grey;
+  width: 48px;
+  height: 48px;
+}
+
+.carousel-window {
+  width: var(--carousel-item-width);
+  min-height: var(--carousel-item-width);
+  overflow-x: hidden;
+  display: flex;
+  justify-content: flex-start;
+  touch-action: pan-x;
+}
+
+.carousel {
+  margin: 20px 0 0 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+.carousel-item {
+  width: var(--carousel-item-width);
+  min-height: var(--carousel-item-width);
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    width: var(--carousel-size);
+    padding: 8px;
+  }
+  
+  .carousel-item img {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gallery {
+  margin-top: 10px;
+  display: flex;
+  width: 100vw;
+  overflow-x: auto;
+}
+
+.gallery-item {
+  margin-left: var(--spacing);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.thumbnail {
+  padding: var(--spacing);
+}
+
+.color-picker {
+  margin-top: calc(2 * var(--spacing));
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
