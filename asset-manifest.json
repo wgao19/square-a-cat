@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/square-a-cat/static/css/main.a50a7ad3.css",
+    "main.js": "/square-a-cat/static/js/main.8a52b6f8.js",
+    "static/js/787.dd627809.chunk.js": "/square-a-cat/static/js/787.dd627809.chunk.js",
+    "service-worker.js": "/square-a-cat/service-worker.js",
+    "index.html": "/square-a-cat/index.html",
+    "main.a50a7ad3.css.map": "/square-a-cat/static/css/main.a50a7ad3.css.map",
+    "main.8a52b6f8.js.map": "/square-a-cat/static/js/main.8a52b6f8.js.map",
+    "787.dd627809.chunk.js.map": "/square-a-cat/static/js/787.dd627809.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a50a7ad3.css",
+    "static/js/main.8a52b6f8.js"
+  ]
+}
