@@ -14,7 +14,6 @@
 /* Basic page style resets */
 * {
   box-sizing: border-box;
-  --carousel-size: 500px;
 }
 body {
   margin: 0;
@@ -45,13 +44,14 @@ body {
 .carousel-window {
   width: var(--carousel-item-width);
   min-height: var(--carousel-item-width);
+  margin: 0 auto;
   overflow-x: hidden;
   display: flex;
   justify-content: flex-start;
   touch-action: pan-x;
 }
 
-.carousel {
+.carousel-list {
   margin: 20px 0 0 0;
   padding: 0;
   display: flex;
@@ -70,17 +70,6 @@ body {
 
 .carousel-item img {
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  .carousel-item {
-    width: var(--carousel-size);
-    padding: 8px;
-  }
-  
-  .carousel-item img {
-    width: 100%;
-  }
 }
 
 .gallery {

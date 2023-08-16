@@ -21,6 +21,11 @@ export const CAROUSEL_SWIPE_THRESHOLD = 2;
  */
 export const CAROUSEL_SWIPE_UNCERTAINTY_THRESHOLD = 3;
 
+/**
+ * px
+ */
+const CAROUSEL_MAX_WIDTH = 720;
+
 const Carousel = () => {
   const { state, contents: images } =
     useRecoilValueLoadable(rastoredImageState);
@@ -172,7 +177,7 @@ const Carousel = () => {
     carouselSizeRef.current = vw;
     document.documentElement.style.setProperty(
       "--carousel-item-width",
-      `${vw}px`
+      `${Math.min(vw, CAROUSEL_MAX_WIDTH)}px`
     );
   }, []);
 
@@ -187,7 +192,7 @@ const Carousel = () => {
       onTouchMove={handleSwipeMove}
     >
       <ul
-        className="carousel"
+        className="carousel-list"
         ref={(node) => {
           updateWidth(node);
           carouselListRef.current = node;
@@ -196,7 +201,7 @@ const Carousel = () => {
         {state === "loading" && files.map(file => <li className="carousel-item">loading</li>)}
         {state === "hasValue" &&
           images.map((image, index) => (
-            <li className="carousel-item" style={{ backgroundColor: color }}>
+            <li className="carousel-item" style={{ backgroundColor: color }} key={`carousel item ${index}`}>
               <img alt="downloadable" src={image.url} className="carousel-img" />
             </li>
           ))}
