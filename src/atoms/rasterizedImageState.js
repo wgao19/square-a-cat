@@ -4,8 +4,8 @@ import { colorState } from "./colorState";
 
 const outputMaxSize = 1440; // IG uses this dimension
 
-export const rastoredImageState = selector({
-  key: "rastoredImageState",
+export const rasterizedImageState = selector({
+  key: "rasterizedImageState",
   get: async ({ get }) => {
     const color = get(colorState);
     const files = get(fileState);

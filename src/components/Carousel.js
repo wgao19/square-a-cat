@@ -3,7 +3,7 @@ import React, { useState, useRef, useCallback, useEffect } from "react";
 import { useRecoilValueLoadable, useRecoilValue } from "recoil";
 import { colorState } from "../atoms/colorState";
 import { fileState } from "../atoms/fileState";
-import { rastoredImageState } from "../atoms/rastoredImageState";
+import { rasterizedImageState } from "../atoms/rasterizedImageState";
 import Uploader from "./Uploader";
 
 /**
@@ -28,7 +28,7 @@ const CAROUSEL_MAX_WIDTH = 720;
 
 const Carousel = () => {
   const { state, contents: images } =
-    useRecoilValueLoadable(rastoredImageState);
+    useRecoilValueLoadable(rasterizedImageState);
   const files = useRecoilValue(fileState);
 
   const [activeIndex, setActiveIndex] = useState(0);
