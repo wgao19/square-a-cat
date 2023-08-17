@@ -14,6 +14,7 @@
 /* Basic page style resets */
 * {
   box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
 }
 body {
   margin: 0;
@@ -24,21 +25,13 @@ body {
 
 /* Import fonts */
 @font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
+  font-family: Space Grotesk;
+  src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 }
 @font-face {
-  font-family: HK Grotesk;
+  font-family: Space Grotesk;
   font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-    format("opentype");
-}
-
-.add-button {
-  color: grey;
-  width: 48px;
-  height: 48px;
+  src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 }
 
 .carousel-window {
@@ -58,7 +51,6 @@ body {
   align-items: center;
 }
 
-
 .carousel-item {
   width: var(--carousel-item-width);
   min-height: var(--carousel-item-width);
@@ -72,6 +64,10 @@ body {
   width: 100%;
 }
 
+.carousel-item.file-upload {
+  border: 1px solid white;
+}
+
 .gallery {
   margin-top: 10px;
   display: flex;
@@ -79,11 +75,30 @@ body {
   overflow-x: auto;
 }
 
+.gallery {
+  margin-bottom: 1rem;
+}
+
 .gallery-item {
   margin-left: var(--spacing);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.gallery-item button {
+  width: 30px;
+  height: 30px;
+  font-weight: 100;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+}
+
+.gallery-item button span {
+  display: block;
+  font-size: 20px;
+  transform: rotate(45deg);
 }
 
 .thumbnail {
@@ -94,4 +109,13 @@ body {
   margin-top: calc(2 * var(--spacing));
   display: flex;
   justify-content: center;
+}
+
+.color-picker input, .color-picker button {
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  margin-right: 4px;
+  width: 12ch;
+  height: 12ch;
 }

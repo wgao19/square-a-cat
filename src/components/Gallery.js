@@ -21,7 +21,9 @@ const Gallery = () => {
               <image href={URL.createObjectURL(image)} width="100" height="100" x="0" y="0" preserveAspectRatio="xMidYMid meet"  />
             </svg>
           </div>
-          <button onClick={() => removeImage(index)}>Remove</button>
+          <button onClick={() => removeImage(index)}>
+            <span>+</span>
+          </button>
         </div>
       ))}
     </div>

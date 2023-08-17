@@ -14,7 +14,7 @@ const Uploader = () => {
     setFiles((oldFiles) => [...oldFiles, ...Array.from(e.target.files)]);
   };
   
-  const backgroundColor = color === 'transparent' ? DEFAULT_BACKDROP : color;
+  const backgroundColor = color === 'transparent' ? 'transparent' : color;
   const strokeColor = color === 'white' ? DEFAULT_BACKDROP : 'white';
 
 
