@@ -93,12 +93,12 @@ body {
   color: white;
   background: transparent;
   border: 1px solid white;
+  overflow: hidden;
 }
 
 .gallery-item button span {
   display: block;
-  font-size: 20px;
-  transform: rotate(45deg);
+  transform: scale(200%) rotate(45deg);
 }
 
 .thumbnail {
