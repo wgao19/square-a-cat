@@ -28,10 +28,20 @@ body {
   font-family: Space Grotesk;
   src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 }
-@font-face {
-  font-family: Space Grotesk;
-  font-weight: bold;
-  src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dotted white;
+}
+
+.header-row {
+  display: flex;
 }
 
 .carousel-window {
@@ -118,4 +128,55 @@ body {
   margin-right: 4px;
   width: 12ch;
   height: 12ch;
+}
+
+.about-toggle {
+  padding: 4px;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold; 
+  float: right;
+  margin-left: auto;
+}
+
+.header-row > .about-toggle {
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.about-toggle span {
+  display: block;
+  transform: rotate(45deg);
+}
+
+#modal-root {
+  display: flex;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+}
+.about {
+  color: white;
+  width: calc(100vw - 16px);
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: auto;
+  background: black;
+  border: 1px solid white;
+  padding: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.about small {
+  margin-top: 2rem;
 }
