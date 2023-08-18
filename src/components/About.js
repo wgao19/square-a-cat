@@ -9,7 +9,11 @@ export const About = () => {
   );
   return (
     <>
-      <button className="about-toggle" onClick={toggleAboutPanel}>
+      <button
+        data-umami-event="about toggle"
+        className="about-toggle"
+        onClick={toggleAboutPanel}
+      >
         i
       </button>
       {open &&
